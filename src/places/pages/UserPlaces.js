@@ -15,7 +15,7 @@ const UserPlaces = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await sendRequest(`http://localhost:5000/api/places/user/${userId}`);
+                const data = await sendRequest(`https://places-app-frontend-ten.vercel.app/api/places/user/${userId}`);
 
                 setUserPlaces(data.places);
                 

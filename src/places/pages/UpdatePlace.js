@@ -35,7 +35,7 @@ const UpdatePlace = () => {
     const placeUpdateSubmitHandler = async (e) => {
         e.preventDefault();
         try {
-            await sendRequest(`http://localhost:5000/api/places/${placeId}`, 'PATCH', JSON.stringify({
+            await sendRequest(`https://places-app-frontend-ten.vercel.app/api/places/${placeId}`, 'PATCH', JSON.stringify({
                 title: formState.inputs.title.value,
                 description: formState.inputs.description.value
             }), 
@@ -52,7 +52,7 @@ const UpdatePlace = () => {
 
         const fetchPlace = async () => {
             try {
-                const data = await sendRequest(`http://localhost:5000/api/places/${placeId}`);     
+                const data = await sendRequest(`https://places-app-frontend-ten.vercel.app/api/places/${placeId}`);     
                 let placeFound = data.place;         
                 setLoadedPlace(placeFound);
 
