@@ -28,7 +28,7 @@ const PlaceItem = props => {
         try {
             setShowConfirmModal(false);
 
-            await sendRequest(`https://places-app-frontend-ten.vercel.app/api/places/${props.id}`, 'DELETE', null, {
+            await sendRequest(`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/api/places/${props.id}`, 'DELETE', null, {
                 Authorization: 'Bearer' + auth.token
             });
             
@@ -72,7 +72,7 @@ const PlaceItem = props => {
                 <Card className='place-item__content'>
                     {isLoading && <LoadingSpinner asOverlay/>}
                     <div className='place-item__image'>
-                        <img src={`https://places-app-frontend-ten.vercel.app/${props.image}`} alt={props.title} />
+                        <img src={`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/${props.image}`} alt={props.title} />
                     </div>
                     <div className='place-item__info'>
                         <h2>{props.title}</h2>
