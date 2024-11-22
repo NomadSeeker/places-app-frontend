@@ -35,7 +35,7 @@ const UpdatePlace = () => {
     const placeUpdateSubmitHandler = async (e) => {
         e.preventDefault();
         try {
-            await sendRequest(`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/api/places/${placeId}`, 'PATCH', JSON.stringify({
+            await sendRequest(`https://places-app-api.vercel.app/api/places/${placeId}`, 'PATCH', JSON.stringify({
                 title: formState.inputs.title.value,
                 description: formState.inputs.description.value
             }), 
@@ -52,7 +52,7 @@ const UpdatePlace = () => {
 
         const fetchPlace = async () => {
             try {
-                const data = await sendRequest(`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/api/places/${placeId}`);     
+                const data = await sendRequest(`https://places-app-api.vercel.app/api/places/${placeId}`);     
                 let placeFound = data.place;         
                 setLoadedPlace(placeFound);
 
