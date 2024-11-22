@@ -28,7 +28,7 @@ const PlaceItem = props => {
         try {
             setShowConfirmModal(false);
 
-            await sendRequest(`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/api/places/${props.id}`, 'DELETE', null, {
+            await sendRequest(`https://places-app-api.vercel.app/api/places/${props.id}`, 'DELETE', null, {
                 Authorization: 'Bearer' + auth.token
             });
             
