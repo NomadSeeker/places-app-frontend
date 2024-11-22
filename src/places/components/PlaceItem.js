@@ -72,7 +72,7 @@ const PlaceItem = props => {
                 <Card className='place-item__content'>
                     {isLoading && <LoadingSpinner asOverlay/>}
                     <div className='place-item__image'>
-                        <img src={`https://places-app-backend-chumqc62r-nomadseekers-projects.vercel.app/${props.image}`} alt={props.title} />
+                        <img src={`https://places-app-api.vercel.app/${props.image}`} alt={props.title} />
                     </div>
                     <div className='place-item__info'>
                         <h2>{props.title}</h2>
